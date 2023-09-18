@@ -1,10 +1,16 @@
 # eu_nao_sei_flutter
 
-Um novo projeto Flutter.
+minha base de pesquisa em Flutter.
 
 ## Introdução
 
-Este projeto é um ponto de partida para um aplicativo Flutter.
+Eu não sei Flutter, mesmo depois de adquirir cursos, sempre faltou algo para dar inicio a um desenvolvimento prático.
+
+O que mais me frustou no aprendizado, é não ter como pesquisar algo que foi ensinado. Não existe tópicos de pesquisa sobre o ensino e nem disponibilidade da escrita dos mesmos e muito menos a apresentação individual de cada recursos para testar separadamente.
+
+Pensando na minha incapacidade de aprender flutter, esse repositorio vai ser a minha base de pesquisa.
+
+<br>
 
 Alguns recursos para você começar se este é o seu primeiro projeto Flutter:
 
