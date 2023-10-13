@@ -4,13 +4,9 @@ minha base de pesquisa em Flutter.
 
 ## Introdução
 
-Eu não sei Flutter, mesmo depois de adquirir cursos, sempre faltou algo para dar inicio a um desenvolvimento prático.
+Eu não sei Flutter, portanto, essa é uma tentativa em ter um material a disposição para um desenvolvimento prático.
 
-<!-- O que mais me frustou no aprendizado, é não ter como pesquisar algo que foi ensinado. Não existe tópicos de pesquisa sobre o ensino e nem disponibilidade da escrita dos mesmos e muito menos a apresentação individual de cada recursos para testar separadamente. -->
-
-Pensando na minha incapacidade de aprender flutter, esse repositorio vai ser a minha base de pesquisa.
-
-Caso queira colaborar com material para deixar disponivel aqui, favor entrar em contato: rosenomatos@gmail.com
+Colabore com material para deixar disponivel nesse repositório, favor entrar em contato: eunaoseiflutter@gmail.com
 
 <br>
 

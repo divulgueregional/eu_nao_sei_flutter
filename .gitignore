@@ -42,3 +42,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+#####################################
+#### EU NÃO SEI FLUTTER #############
+#####################################
+
+/lib/app/modules/dashboard_flutter_web
+/lib/app/modules/diversos

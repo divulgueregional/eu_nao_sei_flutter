@@ -1,20 +1,17 @@
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController.
+  // RxInt expandedTileIndex =
+  //     (-1).obs; // Inicialize a variável observável RxInt com -1
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  RxInt expandedTileIndex = 1.obs;
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
+  void toggleExpandedTile(int index) {
+    // print(index);
+    if (expandedTileIndex.value == index) {
+      expandedTileIndex.value = 1;
+    } else {
+      expandedTileIndex.value = index;
+    }
   }
 }
