@@ -4,6 +4,7 @@ import 'diversos_routes.dart';
 import 'widgets_routes.dart';
 import 'links_routes.dart';
 import 'menu_painel_routes.dart';
+import 'teste_routes.dart';
 
 class AppPages {
   AppPages._();
@@ -17,5 +18,6 @@ class AppPages {
     ...WidgetsRoutes.routes,
     ...LinksRoutes.routes,
 		...MenuPainelRoutes.routes,
+		...TesteRoutes.routes,
   ];
 }

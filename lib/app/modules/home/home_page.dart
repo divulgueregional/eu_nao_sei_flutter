@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../menu_painel/box/estilo_email/estilo_email.dart';
 import 'home_controller.dart';
 
 final Uri url = Uri.parse('https://pub.dev/packages/get');
@@ -29,7 +30,7 @@ class HomePage extends GetView<HomeController> {
                 ),
               ),
               // #############################
-              // ##### MENU - WIDGETS ########
+              // ##### MENU - TESTES ########
               // #############################
               ExpansionTile(
                 initiallyExpanded: controller.expandedTileIndex.value == 0,
@@ -52,7 +53,7 @@ class HomePage extends GetView<HomeController> {
                           width:
                               5), // Adicione um espaçamento entre o ícone e o texto
                       Text(
-                        'Widgets',
+                        'TESTE DEV',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -75,30 +76,30 @@ class HomePage extends GetView<HomeController> {
                           // SizedBox(
                           //     width:
                           //         5), // Adicione um espaçamento entre o ícone e o texto
-                          Text('Color'),
+                          Text('Testes'),
                         ],
                       ),
                     ),
                     children: [
                       ListTile(
                         contentPadding: const EdgeInsets.only(left: 70),
-                        title: const Text('Color'),
+                        title: const Text('Teste 1'),
                         onTap: () {
-                          // Ação quando Item 3_1_1 for clicado
+                          Get.toNamed('/teste/teste-1');
                         },
                       ),
                       ListTile(
                         contentPadding: const EdgeInsets.only(left: 70),
-                        title: const Text('ColoredBox'),
+                        title: const Text('Teste 2'),
                         onTap: () {
-                          // Ação quando Item 3_1_1 for clicado
+                          Get.toNamed('/teste/teste-1');
                         },
                       ),
                       ListTile(
                         contentPadding: const EdgeInsets.only(left: 70),
-                        title: const Text('ColorFilter'),
+                        title: const Text('Teste 3'),
                         onTap: () {
-                          // Ação quando Item 3_1_1 for clicado
+                          Get.toNamed('/teste/teste-1');
                         },
                       ),
                     ],
@@ -131,6 +132,292 @@ class HomePage extends GetView<HomeController> {
                   ],
                 ),
                 trailing: null, // Remove o ícone de expansão
+              ),
+
+              // #############################
+              // ##### PRIMEIROS PASSOS ######
+              // #############################
+              ExpansionTile(
+                initiallyExpanded: controller.expandedTileIndex.value == 1,
+                onExpansionChanged: (isExpanded) {
+                  if (isExpanded) {
+                    controller.toggleExpandedTile(1);
+                    // controller.toggleExpandedTile(0);
+                  }
+                },
+                // O restante do ExpansionTile permanece o mesmo
+                tilePadding: EdgeInsets
+                    .zero, // Remova o preenchimento padrão do ExpansionTile
+                leading: null, // Remova o ícone padrão
+                title: Container(
+                  padding: const EdgeInsets.only(
+                      left: 8), // Defina o espaçamento à esquerda desejado
+                  child: const Row(
+                    children: [
+                      Icon(Icons.rocket),
+                      SizedBox(
+                          width:
+                              5), // Adicione um espaçamento entre o ícone e o texto
+                      Text(
+                        'Primeiros passos',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                children: [
+                  ListTile(
+                    onTap: () {
+                      Get.toNamed('/menu-painel/primeiros-passos/criar-app');
+                    },
+                    contentPadding: const EdgeInsets.only(
+                        left: 50), // Margem esquerda negativa
+                    title: const Row(
+                      children: [
+                        // Icon(Icons.grade),
+                        // SizedBox(
+                        //     width: 5), // Adicione espaço entre o ícone e o texto
+                        Text(
+                          'Criar APP',
+                          style: TextStyle(
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    trailing: null, // Remove o ícone de expansão
+                  ),
+                  ListTile(
+                    onTap: () {
+                      Get.toNamed(
+                          '/menu-painel/primeiros-passos/nomenclaturas');
+                    },
+                    contentPadding: const EdgeInsets.only(
+                        left: 50), // Margem esquerda negativa
+                    title: const Row(
+                      children: [
+                        // Icon(Icons.grade),
+                        // SizedBox(
+                        //     width: 5), // Adicione espaço entre o ícone e o texto
+                        Text(
+                          'Nomenclaturas',
+                          style: TextStyle(
+                            color: Colors.black,
+                            // fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                    trailing: null, // Remove o ícone de expansão
+                  ),
+
+                  // ExpansionTile(
+                  //   tilePadding: EdgeInsets
+                  //       .zero, // Remova o preenchimento padrão do ExpansionTile
+                  //   leading: null, // Remova o ícone padrão
+                  //   title: Container(
+                  //     padding: const EdgeInsets.only(
+                  //         left: 50), // Defina o espaçamento à esquerda desejado
+                  //     child: const Row(
+                  //       children: [
+                  //         // Icon(Icons.label),
+                  //         SizedBox(
+                  //             width:
+                  //                 5), // Adicione um espaçamento entre o ícone e o texto
+                  //         Text('Nível 2'),
+                  //       ],
+                  //     ),
+                  //   ),
+                  //   children: [
+                  //     ListTile(
+                  //       contentPadding: const EdgeInsets.only(left: 70),
+                  //       title: const Text('Menu Item Nível 2'),
+                  //       onTap: () {
+                  //         // Ação quando Item Nível 2 for clicado
+                  //       },
+                  //     ),
+                  //     ListTile(
+                  //       contentPadding: const EdgeInsets.only(left: 70),
+                  //       title: const Text('Menu Item Nível 2'),
+                  //       onTap: () {
+                  //         // Ação quando Item Nível 2 for clicado
+                  //       },
+                  //     ),
+                  //     ExpansionTile(
+                  //       tilePadding: EdgeInsets
+                  //           .zero, // Remova o preenchimento padrão do ExpansionTile
+                  //       leading: null, // Remova o ícone padrão
+                  //       title: Container(
+                  //         padding: const EdgeInsets.only(
+                  //             left:
+                  //                 70), // Defina o espaçamento à esquerda desejado
+                  //         child: const Row(
+                  //           children: [
+                  //             // Icon(Icons.label),
+                  //             // SizedBox(
+                  //             //     width:
+                  //             //         5), // Adicione um espaçamento entre o ícone e o texto
+                  //             Text('Nível 3'),
+                  //           ],
+                  //         ),
+                  //       ),
+                  //       children: [
+                  //         ListTile(
+                  //           contentPadding: const EdgeInsets.only(left: 90),
+                  //           title: const Text('Menu Item Nível 3'),
+                  //           onTap: () {
+                  //             // Ação quando Item Nível 3 for clicado
+                  //           },
+                  //         ),
+                  //         ListTile(
+                  //           contentPadding: const EdgeInsets.only(left: 90),
+                  //           title: const Text('Menu Item Nível 3'),
+                  //           onTap: () {
+                  //             // Ação quando Item Nível 3 for clicado
+                  //           },
+                  //         ),
+                  //       ],
+                  //     ),
+                  //   ],
+                  // ),
+                ],
+              ),
+
+              // #############################
+              // ##### BOX ###################
+              // #############################
+              ExpansionTile(
+                initiallyExpanded: controller.expandedTileIndex.value == 1,
+                onExpansionChanged: (isExpanded) {
+                  if (isExpanded) {
+                    controller.toggleExpandedTile(1);
+                    // controller.toggleExpandedTile(0);
+                  }
+                },
+                // O restante do ExpansionTile permanece o mesmo
+                tilePadding: EdgeInsets
+                    .zero, // Remova o preenchimento padrão do ExpansionTile
+                leading: null, // Remova o ícone padrão
+                title: Container(
+                  padding: const EdgeInsets.only(
+                      left: 8), // Defina o espaçamento à esquerda desejado
+                  child: const Row(
+                    children: [
+                      Icon(Icons.all_inbox),
+                      SizedBox(
+                          width:
+                              5), // Adicione um espaçamento entre o ícone e o texto
+                      Text(
+                        'Box',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                children: [
+                  // ListTile(
+                  //   onTap: () {},
+                  //   contentPadding: const EdgeInsets.only(
+                  //       left: 50), // Margem esquerda negativa
+                  //   title: const Row(
+                  //     children: [
+                  //       // Icon(Icons.grade),
+                  //       // SizedBox(
+                  //       //     width: 5), // Adicione espaço entre o ícone e o texto
+                  //       Text(
+                  //         'Menu Item',
+                  //         style: TextStyle(
+                  //           color: Colors.black,
+                  //           // fontWeight: FontWeight.bold,
+                  //         ),
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   trailing: null, // Remove o ícone de expansão
+                  // ),
+                  ExpansionTile(
+                    tilePadding: EdgeInsets
+                        .zero, // Remova o preenchimento padrão do ExpansionTile
+                    leading: null, // Remova o ícone padrão
+                    title: Container(
+                      padding: const EdgeInsets.only(
+                          left: 50), // Defina o espaçamento à esquerda desejado
+                      child: const Row(
+                        children: [
+                          // Icon(Icons.label),
+                          SizedBox(
+                              width:
+                                  5), // Adicione um espaçamento entre o ícone e o texto
+                          Text('Diversos'),
+                        ],
+                      ),
+                    ),
+                    children: [
+                      ListTile(
+                        contentPadding: const EdgeInsets.only(left: 70),
+                        title: const Text('Estilo E-mail'),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (c) {
+                                return const EstiloEmail();
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                      // ListTile(
+                      //   contentPadding: const EdgeInsets.only(left: 70),
+                      //   title: const Text('Menu Item Nível 2'),
+                      //   onTap: () {
+                      //     // Ação quando Item Nível 2 for clicado
+                      //   },
+                      // ),
+                      // ExpansionTile(
+                      //   tilePadding: EdgeInsets
+                      //       .zero, // Remova o preenchimento padrão do ExpansionTile
+                      //   leading: null, // Remova o ícone padrão
+                      //   title: Container(
+                      //     padding: const EdgeInsets.only(
+                      //         left:
+                      //             70), // Defina o espaçamento à esquerda desejado
+                      //     child: const Row(
+                      //       children: [
+                      //         // Icon(Icons.label),
+                      //         // SizedBox(
+                      //         //     width:
+                      //         //         5), // Adicione um espaçamento entre o ícone e o texto
+                      //         Text('Nível 3'),
+                      //       ],
+                      //     ),
+                      //   ),
+                      //   children: [
+                      //     ListTile(
+                      //       contentPadding: const EdgeInsets.only(left: 90),
+                      //       title: const Text('Menu Item Nível 3'),
+                      //       onTap: () {
+                      //         // Ação quando Item Nível 3 for clicado
+                      //       },
+                      //     ),
+                      //     ListTile(
+                      //       contentPadding: const EdgeInsets.only(left: 90),
+                      //       title: const Text('Menu Item Nível 3'),
+                      //       onTap: () {
+                      //         // Ação quando Item Nível 3 for clicado
+                      //       },
+                      //     ),
+                      //   ],
+                      // ),
+                    ],
+                  ),
+                ],
               ),
 
               // #############################

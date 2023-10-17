@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
-import '../modules/links/links_binding.dart';
-import '../modules/links/links_page.dart';
+import '../modules/menu_painel/links/links_binding.dart';
+import '../modules/menu_painel/links/links_page.dart';
 
 class LinksRoutes {
   LinksRoutes._();
